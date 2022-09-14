@@ -1,0 +1,104 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+
+/* propiedades del padre*/
+.padre{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(2, 350px);
+    gap: 10px;
+}
+
+
+
+/* propiedades de los hijos */
+
+.hijo{
+    background-color: greenyellow;
+}
+
+header{
+    background-color: violet;
+}
+
+/* propiedades de ejemplo*/
+
+.ejemplo{
+    background-color: greenyellow;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.imagen-uno{
+    align-self: flex-end;
+    justify-self: end;
+}
+
+
+
+/* ultimo ejemplo grid-template-areas*/
+
+/*propiedades del padre */
+
+.contenedor{
+    height: 100vh;
+    display: grid;  
+    grid-template-columns: ;
+    grid-template-rows: ;
+
+    /*grid tamplate areas */ 
+    grid-template-areas:
+    "nav header header"
+    "nav main section"
+    "nav section-dos section"
+    "nav footer footer";
+
+    gap: 5px
+
+}
+
+header{
+    grid-area: header;
+    background-color: goldenrod;
+
+}
+
+nav{
+    grid-area: nav;
+    background-color: goldenrod;
+    
+}
+
+main{
+    grid-area: main;
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    
+}
+
+section{
+    grid-area: section;
+    background-color: goldenrod;
+}
+
+.section-dos{
+    grid-area: section-dos;
+    background-color: goldenrod;
+}
+
+footer{
+    grid-area: footer;
+    background-color: goldenrod;
+}
